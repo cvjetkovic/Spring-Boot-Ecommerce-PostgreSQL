@@ -2,6 +2,7 @@ package com.cvjetkovic.springecommerce.model.product;
 
 import javax.persistence.*;
 import javax.validation.constraints.NotNull;
+
 /**
  * @author Vladimir Cvjetkovic
  */

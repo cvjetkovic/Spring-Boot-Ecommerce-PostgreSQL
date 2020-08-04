@@ -5,6 +5,7 @@ import com.cvjetkovic.springecommerce.model.order.OrderProduct;
 import com.cvjetkovic.springecommerce.repository.OrderProductRepository;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
+
 /**
  * @author Vladimir Cvjetkovic
  */

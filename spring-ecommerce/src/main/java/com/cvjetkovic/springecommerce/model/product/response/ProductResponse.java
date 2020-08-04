@@ -3,6 +3,7 @@ package com.cvjetkovic.springecommerce.model.product.response;
 import com.cvjetkovic.springecommerce.model.product.Product;
 
 import java.util.List;
+
 /**
  * @author Vladimir Cvjetkovic
  */

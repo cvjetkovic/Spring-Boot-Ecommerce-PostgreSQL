@@ -1,4 +1,5 @@
 package com.cvjetkovic.springecommerce.model.order;
+
 /**
  * @author Vladimir Cvjetkovic
  */

@@ -11,6 +11,7 @@ import javax.validation.ConstraintViolation;
 import javax.validation.ConstraintViolationException;
 import java.util.ArrayList;
 import java.util.List;
+
 /**
  * @author Vladimir Cvjetkovic
  */

@@ -2,6 +2,7 @@ package com.cvjetkovic.springecommerce.model.category;
 
 import javax.persistence.*;
 import java.util.List;
+
 /**
  * @author Vladimir Cvjetkovic
  */

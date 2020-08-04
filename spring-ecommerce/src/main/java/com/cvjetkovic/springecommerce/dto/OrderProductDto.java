@@ -1,6 +1,7 @@
 package com.cvjetkovic.springecommerce.dto;
 
 import com.cvjetkovic.springecommerce.model.product.Product;
+
 /**
  * @author Vladimir Cvjetkovic
  */

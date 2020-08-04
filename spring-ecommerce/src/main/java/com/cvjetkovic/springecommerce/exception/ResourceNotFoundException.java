@@ -1,4 +1,5 @@
 package com.cvjetkovic.springecommerce.exception;
+
 /**
  * @author Vladimir Cvjetkovic
  */
