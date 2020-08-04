@@ -20,7 +20,7 @@ public class Category {
     @Column(name = "description")
     private String description;
 
-    @OneToMany(fetch = FetchType.EAGER)
+    @OneToMany(fetch = FetchType.EAGER, cascade = CascadeType.REMOVE, orphanRemoval = true)
     @JoinColumn(name = "parent_id", referencedColumnName = "category_id")
     private List<Category> subcategories;
 

@@ -1,7 +1,9 @@
 package com.cvjetkovic.springecommerce.controller.category;
 
+import com.cvjetkovic.springecommerce.model.category.Category;
 import com.cvjetkovic.springecommerce.model.category.CategoryRequest;
 import com.cvjetkovic.springecommerce.model.category.CategoryResponse;
+import com.cvjetkovic.springecommerce.model.product.Product;
 import com.cvjetkovic.springecommerce.service.category.CategoryService;
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.*;
@@ -30,12 +32,24 @@ public class CategoryController {
         return categoryService.getCategoryResponse();
     }
 
-    @PostMapping
+    @PostMapping(value = "/sub")
     @ResponseStatus(HttpStatus.CREATED)
     public CategoryRequest create(@RequestBody CategoryRequest category) {
         categoryService.insertWithQuery(category);
         return category;
     }
 
+
+    @PutMapping("/{id}")
+    @ResponseStatus(HttpStatus.OK)
+    public Category updateCategory(@RequestBody Category category, @PathVariable Long id){
+        return categoryService.update(category, id);
+    }
+
+    @DeleteMapping("/{id}")
+    @ResponseStatus(HttpStatus.OK)
+    public void deleteCategory(@PathVariable Long id){
+        categoryService.delete(id);
+    }
 
 }

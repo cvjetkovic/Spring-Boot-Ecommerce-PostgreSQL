@@ -5,7 +5,6 @@ import com.cvjetkovic.springecommerce.model.category.Category;
 import com.cvjetkovic.springecommerce.model.category.CategoryRequest;
 import com.cvjetkovic.springecommerce.model.category.CategoryResponse;
 import com.cvjetkovic.springecommerce.repository.CategoryRepository;
-import com.cvjetkovic.springecommerce.repository.CategoryRepository;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
