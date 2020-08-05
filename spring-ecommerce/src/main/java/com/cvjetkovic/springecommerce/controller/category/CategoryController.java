@@ -31,9 +31,16 @@ public class CategoryController {
         return categoryService.getCategoryResponse();
     }
 
+    @PostMapping(value = "/cat")
+    @ResponseStatus(HttpStatus.CREATED)
+    public Category createCategory(@RequestBody Category category) {
+        categoryService.save(category);
+        return category;
+    }
+
     @PostMapping(value = "/sub")
     @ResponseStatus(HttpStatus.CREATED)
-    public CategoryRequest create(@RequestBody CategoryRequest category) {
+    public CategoryRequest createSubcategory(@RequestBody CategoryRequest category) {
         categoryService.insertWithQuery(category);
         return category;
     }
