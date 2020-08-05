@@ -9,7 +9,6 @@ import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
 import javax.validation.constraints.Min;
-import javax.validation.constraints.NotNull;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -26,13 +25,13 @@ public class CategoryServiceImpl implements CategoryService {
         this.categoryRepository = categoryRepository;
     }
 
-    @Override
-    public @NotNull List<Category> getAllCategories() {
-        return categoryRepository.findAll();
-    }
+//    @Override
+//    public @NotNull List<Category> getAllCategories() {
+//        return categoryRepository.findAll();
+//    }
 
     @Override
-    public CategoryResponse getCategoryResponse() {
+    public CategoryResponse getAllCategories() {
 
         List<Category> categories = categoryRepository.findAll();
         List<Category> returnValue = new ArrayList<>();
@@ -61,8 +60,6 @@ public class CategoryServiceImpl implements CategoryService {
 
     @Override
     public Category save(Category category) {
-
-
         return categoryRepository.save(category);
     }
 

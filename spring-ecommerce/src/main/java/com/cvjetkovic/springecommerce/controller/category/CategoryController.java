@@ -27,24 +27,26 @@ public class CategoryController {
 //    }
 
     @GetMapping(value = {"", "/"})
-    public CategoryResponse getCategories1() {
-        return categoryService.getCategoryResponse();
+    public CategoryResponse getAllCategories() {
+        return categoryService.getAllCategories();
     }
 
-    @PostMapping(value = "/cat")
+    @GetMapping(value = "/{id}")
+    public Category getCategory(@PathVariable Long id) { return categoryService.getCategory(id); }
+
+    @PostMapping(value = "/category")
     @ResponseStatus(HttpStatus.CREATED)
     public Category createCategory(@RequestBody Category category) {
         categoryService.save(category);
         return category;
     }
 
-    @PostMapping(value = "/sub")
+    @PostMapping(value = "/subcategory")
     @ResponseStatus(HttpStatus.CREATED)
     public CategoryRequest createSubcategory(@RequestBody CategoryRequest category) {
         categoryService.insertWithQuery(category);
         return category;
     }
-
 
     @PutMapping("/{id}")
     @ResponseStatus(HttpStatus.OK)

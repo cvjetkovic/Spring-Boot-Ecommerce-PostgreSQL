@@ -1,6 +1,7 @@
 package com.cvjetkovic.springecommerce.repository;
 
 import com.cvjetkovic.springecommerce.model.category.Category;
+import com.cvjetkovic.springecommerce.model.category.CategoryResponse;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Modifying;
 import org.springframework.data.jpa.repository.Query;
@@ -15,7 +16,7 @@ public interface CategoryRepository extends JpaRepository<Category, Long> {
 
     @Modifying
     @Transactional
-    @Query(value = "INSERT INTO categories ( description, name, parent_id) VALUES(?1,?2,?3) ", nativeQuery = true)
+    @Query(value = "INSERT INTO categories ( description, name, parent_id) VALUES(?1,?2,?3)", nativeQuery = true)
     void insertSubcategory(String name, String description, Long parent_id);
 
 }

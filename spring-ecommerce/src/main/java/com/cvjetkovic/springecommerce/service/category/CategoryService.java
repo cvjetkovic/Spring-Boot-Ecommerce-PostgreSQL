@@ -16,7 +16,7 @@ import java.util.List;
 @Validated
 public interface CategoryService {
 
-    @NotNull List<Category> getAllCategories();
+//    @NotNull List<Category> getAllCategories();
 
     Category getCategory(@Min(value = 1L, message = "Invalid category ID.") long id);
 
@@ -26,7 +26,7 @@ public interface CategoryService {
 
     void delete(Long id);
 
-    CategoryResponse getCategoryResponse();
+    CategoryResponse getAllCategories();
 
     void insertWithQuery(CategoryRequest category);
 }
